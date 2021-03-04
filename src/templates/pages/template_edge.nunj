@@ -25,19 +25,19 @@
       {{ benefits({
         png: "true",
         data: [{
-          iconName: "edge/collaboration",
+          iconName: "edge/collaboration_new",
           title: "Collaboration"
         },{
-          iconName: "edge/productivity",
+          iconName: "edge/productivity_new",
           title: "Productivity"
         },{
-          iconName: "edge/flexibility",
+          iconName: "edge/flexibility_new",
           title: "Flexibility"
         },{
-          iconName: "edge/security",
+          iconName: "edge/security_new",
           title: "Security"
         },{
-          iconName: "edge/iot",
+          iconName: "edge/iot_new",
           title: "Internet of Things"
         }]
       }) }}

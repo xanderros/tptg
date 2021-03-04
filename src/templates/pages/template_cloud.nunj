@@ -165,7 +165,7 @@
       <h3 class="subtitle column-sm mb-title">Our partners</h3>
       {{ partners({
         data: [{
-          imgName: "logo_aws",
+          imgName: "logo_aws_new",
           imgAlt: "AWS"
         },{
           imgName: "logo_azure",

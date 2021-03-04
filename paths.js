@@ -11,7 +11,7 @@ export default {
     templates: './src',
     nunj: 'src/templates/pages/**/*.nunj',
     scripts: 'src/js/index.js',
-    styles: 'src/sass/solutions-styles.scss',
+    styles: 'src/sass/solutions.scss',
     images: 'src/img/**/*.*',
     icons: 'src/svg/**/*.*',
     imagesInline: 'src/img/inline/',

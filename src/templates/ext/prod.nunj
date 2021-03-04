@@ -13,7 +13,7 @@
 {% from "../../components/wall/wall.nunj" import wall %}
 {% from "../../components/statistics/statistics.nunj" import statistics %}
 
-  <link rel="stylesheet" href="../_css/solutions-styles.css"/>
+  <link rel="stylesheet" href="../_css/solutions.css"/>
 </head>
 <body>
 <div class="page">

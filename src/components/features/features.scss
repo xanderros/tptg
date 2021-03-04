@@ -21,6 +21,7 @@
     font-family: $font-interstate;
     font-size: 30px;
     line-height: 1.35;
+    letter-spacing: normal;
     color: $color-black;
     @include break-text;
     margin: 0 -18px 15px;
