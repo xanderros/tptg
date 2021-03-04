@@ -1,0 +1,78 @@
+// current fonts
+@font-face {
+  font-family: "SF Compact";
+  src: url("../_fonts/SF-Compact-Display-Light.eot");
+  src: url("../_fonts/SF-Compact-Display-Light-.eot#iefix")
+  format("embedded-opentype"),
+  url("../_fonts/SF-Compact-Display-Light.woff") format("woff"),
+  url("../_fonts/SF-Compact-Display-Light.ttf") format("truetype"),
+  url("http://www.tptg.co.uk/fonts/SF-Compact-Display-Light.svg#SF-Compact-Display-Light")
+  format("svg");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "SF Compact";
+  src: url("../_fonts/SF-Compact-Display-Regular.eot");
+  src: url("../_fonts/SF-Compact-Display-Regular-.eot#iefix")
+  format("embedded-opentype"),
+  url("../_fonts/SF-Compact-Display-Regular.woff") format("woff"),
+  url("../_fonts/SF-Compact-Display-Regular.ttf") format("truetype"),
+  url("http://www.tptg.co.uk/fonts/SF-Compact-Display-Regular.svg#SF-Compact-Display-Regular")
+  format("svg");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "SF Compact";
+  src: url("../_fonts/SF-Compact-Display-Medium.eot");
+  src: url("../_fonts/SF-Compact-Display-Medium-.eot#iefix")
+  format("embedded-opentype"),
+  url("../_fonts/SF-Compact-Display-Medium.woff") format("woff"),
+  url("../_fonts/SF-Compact-Display-Medium.ttf") format("truetype"),
+  url("http://www.tptg.co.uk/fonts/SF-Compact-Display-Medium.svg#SF-Compact-Display-Medium")
+  format("svg");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "SF Compact";
+  src: url("../_fonts/SF-Compact-Display-Bold.eot");
+  src: url("../_fonts/SF-Compact-Display-Bold-.eot#iefix")
+  format("embedded-opentype"),
+  url("../_fonts/SF-Compact-Display-Bold.woff") format("woff"),
+  url("../_fonts/SF-Compact-Display-Bold.ttf") format("truetype"),
+  url("http://www.tptg.co.uk/fonts/SF-Compact-Display-Bold.svg#SF-Compact-Display-Bold")
+  format("svg");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: InterstatePlus;
+  src: url("../_fonts/InterstatePlus-Light.eot");
+  src: url("../_fonts/InterstatePlus-Light-.eot#iefix") format("embedded-opentype"),
+  url("../_fonts/InterstatePlus-Light.woff") format("woff"),
+  url("../_fonts/InterstatePlus-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: InterstateBold;
+  src: url("../_fonts/Interstate-Bold.eot");
+  src: url("../_fonts/Interstate-Bold-.eot#iefix") format("embedded-opentype"),
+  url("../_fonts/Interstate-Bold.woff") format("woff"),
+  url("../_fonts/Interstate-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Interstate;
+  src: url("../_fonts/Interstate-Regular.eot");
+  src: url("../_fonts/Interstate-Regular-.eot#iefix") format("embedded-opentype"),
+  url("../_fonts/Interstate-Regular.woff") format("woff"),
+  url("../_fonts/Interstate-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}

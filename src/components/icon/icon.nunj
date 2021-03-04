@@ -1,0 +1,3 @@
+{% macro icon(props) %}
+  <img{% if props.className %} class="{{ props.className }}"{% endif %} src="../_img/solutions/{{ props.name }}.svg" alt="">
+{% endmacro %}

@@ -1,0 +1,50 @@
+{% macro slider(props) %}
+  <div class="slider slider_stories{% if props.arrowsColor %} slider_arrows_{{ props.arrowsColor }}{% endif %}">
+    <div class="slider__wrapper">
+      <div class="slider__container glide">
+        <div class="slider__track glide__track" data-glide-el="track">
+          <ul class="slider__list glide__slides">
+            {% for item in props.data %}
+              <li class="slider__item glide__slide">
+                {% if props.typeDesc %}
+                  <article class="desc">
+                    <div class="desc__figure">
+                      <img class="desc__img" src="../_img/solutions/{{ item.imgName }}.png" srcset="../_img/solutions/{{ item.imgName }}.png 1x, ../_img/solutions/{{ item.imgName }}@2x.png 2x" alt="{{ item.place }}">
+                    </div>
+                    <h3 class="desc__title">{{ item.title }}</h3>
+                    <div class="desc__text">{{ item.text }}</div>
+                  </article>
+                {% else %}
+                  <a href="{{ item.link }}" class="story">
+                    <blockquote class="story__container">
+                      <div class="story__text">“{{ item.quote }}”</div>
+                      <footer class="story__footer">
+                        <div class="story__source">
+                          <b class="story__author">{{ item.author }},</b> <cite class="story__cite" title="{{ item.place }}">{{ item.place }}</cite>
+                        </div>
+                        <div class="story__ref">
+                          <span class="story__link">See success story</span>
+                        </div>
+                        <div class="story__figure">
+                          <img class="story__img lazyload" data-src="../_img/solutions/{{ item.imgName }}.png" data-srcset="../_img/solutions/{{ item.imgName }}.png 1x, ../_img/solutions/{{ item.imgName }}@2x.png 2x" alt="{{ item.place }}">
+                        </div>
+                      </footer>
+                    </blockquote>
+                  </a>
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="slider__arrows glide__arrows" data-glide-el="controls">
+          <button class="slider__arrow glide__arrow glide__arrow--left" data-glide-dir="<">
+            <svg class="slider__arrow-icon" width="7" height="12" viewBox="0 0 7 12" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 1L1 6.07246L6 11" /></svg>
+          </button>
+          <button class="slider__arrow glide__arrow glide__arrow--right" data-glide-dir=">">
+            <svg class="slider__arrow-icon" width="7" height="12" viewBox="0 0 7 12" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 1L1 6.07246L6 11" /></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endmacro %}

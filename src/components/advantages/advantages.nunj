@@ -1,0 +1,12 @@
+{% macro advantages(props) %}
+  <div class="advantages mb-2">
+    {% for item in props.data %}
+      <div class="advantages__item">
+        <div class="advantages__top">
+          <img class="advantages__icon" src="../_img/solutions/{{ item.iconName }}.svg" alt="{{ item.title }}">
+        </div>
+        <div class="advantages__title">{{ item.title }}</div>
+      </div>
+    {% endfor %}
+  </div>
+{% endmacro %}

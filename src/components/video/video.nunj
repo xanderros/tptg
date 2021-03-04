@@ -1,0 +1,15 @@
+{% macro video(props) %}
+  <div class="video">
+    <div class="video__box">
+      <iframe class="video__frame" src="https://player.vimeo.com/video/{{ props.id }}" width="100%" height="100%" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+      <div class="video__cover">
+        <div class="video__bg">
+          <img class="video__bg-img lazyload" data-src="../_img/solutions/{{ props.imgName }}.jpg" data-srcset="../_img/solutions/{{ props.imgName }}@2x.jpg 2x" alt="{{ props.imgAlt }}" data-sizes="auto">
+        </div>
+        <a href="#" class="video__button">
+          <img class="video__icon" src="../_img/solutions/play.svg" alt="">
+        </a>
+      </div>
+    </div>
+  </div>
+{% endmacro %}

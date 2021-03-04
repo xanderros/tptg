@@ -1,0 +1,44 @@
+.service {
+  &__top {
+    display: flex;
+    align-items: flex-end;
+    height: 72px;
+    margin-bottom: 17px;
+  }
+  &__title {
+    font-family: $font-interstate;
+    font-size: 30px;
+    line-height: 1.35;
+    letter-spacing: -0.065em;
+    color: $color-black;
+    @include break-text;
+    margin-bottom: 15px;
+  }
+
+  @include screen-xl {
+    &__title {
+      font-size: 27px;
+    }
+  }
+  @include screen-md {
+    &__top {
+      display: block;
+      height: auto;
+    }
+  }
+  @include screen-sm {
+    &__top {
+      display: block;
+      height: auto;
+      margin-bottom: 15px;
+    }
+    &__icon {
+      transform: scale(0.8);
+      transform-origin: left bottom;
+    }
+    &__title {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+  }
+}

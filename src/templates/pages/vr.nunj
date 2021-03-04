@@ -1,0 +1,8 @@
+---
+title: VR
+---
+{% extends "../ext/dev.nunj" %}
+
+{% block content %}
+  {% include "../pages/template_vr.nunj" %}
+{% endblock content %}

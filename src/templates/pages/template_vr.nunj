@@ -1,0 +1,100 @@
+{% extends "../ext/prod.nunj" %}
+
+{% block content %}
+
+  {{ hero({
+    center: 'true',
+    title: 'Enterprise ready, AR, MR and VR solutions.',
+    imgName: 'vr/hero_vr',
+    imgAlt: 'VR'
+  }) }}
+
+  <div class="frame frame_pb-2">
+    <div class="frame__bg">
+      {{ img({ className: 'frame__bg-img', name: 'bg_purecloud', format: 'png', cover: 'true' }) }}
+    </div>
+    <div class="frame__content box">
+      <div class="typo typo_white">
+        <div class="lead-text column-md mb-3 color-white">
+          There’s nothing quite like wandering through an interactive landscape and our VR solution can develop completely new ways to help your audience connect with your VR experience. Whether it’s gaze-activated hotspots, controllers that allow you to engage with the 3D virtual environment, or tailor-made VR apps: our extensive VR services offer a new and exciting realm of audience participation and engagement.
+        </div>
+        <div class="paragraph paragraph_big column-md">
+          If you’re thinking about exploring the virtual world, our VR solution is ready for you. Our expert team will help you craft a virtual reality experience that will stand out. Collaborating with us will ensure a sculpted experience engaging directly with your audience, immersing them into your world and your story. From there, we’ll work closely with you to identify the right VR platforms for your experience, before sharing it with the non-virtual world.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section section_md bg-light-grey">
+    <div class="box">
+      {{ partners({
+        data: [{
+          imgName: "vr/logo_microsoft",
+          imgAlt: "Microsoft 365"
+        },{
+          imgName: "vr/logo_dynabook-new",
+          imgAlt: "dynabook"
+        },{
+          imgName: "vr/logo_hypervsn",
+          imgAlt: "HYPERVSN"
+        }]
+      }) }}
+    </div>
+  </div>
+
+  {% set units = [{
+    title: 'hyperVSN',
+    text: "
+<p>
+hyperVSN is the ultimate solution for creating, managing and displaying your unique 3D visuals with a holographic effect. A unique combination of high-tech projection units and a smart content management platform, both working together to create an immersive visual experience.
+</p>
+",
+    imgName: 'vr/hypervsn',
+    imgFormat: 'jpg',
+    reverse: 'true'
+  },{
+    title: 'Toshiba DynaEdge',
+    text: "<p>Toshiba DynaEdge is a high-performance wearable Windows 10-based mobile edge computing device, which works alongside a companion pair of Assisted Reality AR100 Viewer smart glasses. Designed to bring hands-free wearable working to enterprise -DynaEdge enables large enterprises to improve efficiency, quality of performance and operating flexibility in a constantly evolving working environment. This revolutionises field service.</p>",
+    imgName: 'vr/toshiba-dynaedge',
+    imgFormat: 'jpg',
+    bgGrey: 'true'
+  },{
+    title: 'Microsoft HoloLens',
+    text: "<p>The Microsoft HoloLens is a holographic computer built into a headset that lets you see, hear, and interact with holograms within any environment. HoloLens is a self-contained all-in-one unit that does not require additional computing hardware to function. Using high-definition lenses and spatial sound technology HoloLens creates an immersive, interactive Augmented Reality experience.</p>",
+    imgName: 'vr/microsoft-hololens',
+    imgFormat: 'jpg',
+    reverse: 'true'
+  },{
+    title: 'VR as a Service (VRaaS)',
+    text: '
+<p>
+Limited only by your imagination; we’ve developed our own VR platform to create bespoke virtual and Augmented Reality content on iOS or Android for training and induction solutions. Downloadable on almost any phone, tablet or headset – the pureVR app offers a completely customisable, innovative and interactive experience.
+</p>
+<p>
+  <div class="apps">
+    <a href="https://play.google.com/store/apps/details?id=com.TPTG.pureVRInduction" target="_blank" class="apps__link">
+      <img class="apps__img lazyload" data-src="../_img/solutions/google-play.png" data-srcset="../_img/solutions/google-play@2x.png 2x" alt="" data-sizes="auto">
+    </a>
+    <a href="https://apps.apple.com/gb/app/purevr/id1454529492" target="_blank" class="apps__link">
+      <img class="apps__img lazyload" data-src="../_img/solutions/appstore.png" data-srcset="../_img/solutions/appstore@2x.png 2x" alt="" data-sizes="auto">
+    </a>
+  </div>
+</p>
+',
+    imgName: 'vr/vraas',
+    imgFormat: 'jpg',
+    bgGrey: 'true'
+  }] %}
+  {% for item in units %}
+    {{ unit(item.title, item.text, item.imgName, item.imgFormat, item.reverse, item.bgGrey, item.shadow, item.paddingSmall) }}
+  {% endfor %}
+
+  <div class="bg-light-grey">
+    {{ contact({
+      column: 'true',
+      title: 'Get in touch about your next project today, our team is ready to discuss your ideas.',
+      imgName: 'get-in-touch_1'
+    }) }}
+  </div>
+
+{% endblock content %}

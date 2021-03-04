@@ -1,0 +1,12 @@
+{% macro img(props) %}
+  {% if props.mobile=='true' %}
+    <picture>
+      <source type="image/jpeg" data-srcset="../_img/solutions/{{ props.name }}_mob.{{ props.format }}, ../_img/solutions/{{ props.name }}_mob@2x.{{ props.format }} 2x" media="(max-width: 480px)">
+      <img class="lazyload {{ props.className }}" data-src="../_img/solutions/{{ props.name }}.{{ props.format }}" data-srcset="../_img/solutions/{{ props.name }}@2x.{{ props.format }} 2x" alt="{{ props.alt }}"{% if props.cover %} data-sizes="auto"{% endif %}{% if props.contain %} data-sizes="auto"{% endif %}>
+    </picture>
+   {% else %}
+    <img class="lazyload {{ props.className }}" data-src="../_img/solutions/{{ props.name }}.{{ props.format }}" data-srcset="../_img/solutions/{{ props.name }}@2x.{{ props.format }} 2x" alt="{{ props.alt }}"{% if props.cover %} data-sizes="auto"{% endif %}{% if props.contain %} data-sizes="auto"{% endif %}>
+  {% endif %}
+{% endmacro %}
+
+

@@ -1,0 +1,26 @@
+{% macro hero(props) %}
+  <section class="hero{% if props.center %} hero_center{% endif %}{% if props.nogradient %} hero_no-gradient{% endif %}">
+    {% if props.center %}
+      <div class="hero__bg">
+        <img class="hero__bg-img" src="../_img/solutions/{{ props.imgName }}.jpg" alt="{{ props.imgAlt }}">
+      </div>
+    {% else %}
+      <div class="hero__bg">
+        <img class="hero__bg-img{% if props.imgCenter %} hero__bg-img_center{% endif %}" src="../_img/solutions/{{ props.imgName }}.jpg" alt="{{ props.imgAlt }}">
+      </div>
+    {% endif %}
+    <div class="box">
+      <div class="hero__content">
+        <h1 class="hero__title">{{ props.title | safe }}</h1>
+        {% if props.text %}
+        <div class="hero__text">{{ props.text }}</div>
+        {% endif %}
+        {% if props.buttonLink %}
+        <div class="hero__button">
+          <a href="{{ props.buttonLink }}" class="button scroll">{{ props.buttonText }}</a>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+{% endmacro %}

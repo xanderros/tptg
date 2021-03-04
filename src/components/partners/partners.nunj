@@ -1,0 +1,9 @@
+{% macro partners(props) %}
+  <ul class="partners">
+    {% for item in props.data %}
+      <li class="partners__item">
+        <img class="partners__logo lazyload" data-src="../_img/solutions/{{ item.imgName }}.png" data-srcset="../_img/solutions/{{ item.imgName }}.png 1x, ../_img/solutions/{{ item.imgName }}@2x.png 2x" alt="{{ item.imgAlt }}">
+      </li>
+    {% endfor %}
+  </ul>
+{% endmacro %}

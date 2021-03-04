@@ -1,0 +1,164 @@
+{% from "../img/img.nunj" import img %}
+{% from "../icon/icon.nunj" import icon %}
+
+{% macro contact(props) %}
+  <div class="contact" id="contact">
+    {{ img({ className: 'contact__bg-img', name: 'bg_purecloud-dark', format: 'png', cover: 'true', mobile: 'true' }) }}
+    <div class="contact__container box">
+      <div class="contact__base">
+        <h2 class="contact__title">{{ props.title }}</h2>
+
+        <form class="contact__form contact-form" id="contact-form">
+          <div class="contact-form__container">
+            <div class="grid grid_form_2">
+              <div class="grid__col">
+                <div class="contact-form__row">
+                  <label class="contact-form__label" for="form-name">Name</label>
+                  <div class="contact-form__control">
+                    <input class="contact-form__input" id="form-name" type="text" required name="name">
+                    <div class="contact-form__error-message">Please enter name</div>
+                  </div>
+                </div>
+                <div class="contact-form__row">
+                  <label class="contact-form__label" for="form-email">Email</label>
+                  <div class="contact-form__control">
+                    <input class="contact-form__input" id="form-email" type="email" required name="email-address">
+                    <div class="contact-form__error-message">Please enter email address</div>
+                  </div>
+                </div>
+                <div class="contact-form__row">
+                  <label class="contact-form__label" for="form-phone">Phone number</label>
+                  <div class="contact-form__control">
+                    <input class="contact-form__input" id="form-phone" type="tel" name="phone-number">
+                    <div class="contact-form__error-message">Please enter phone number</div>
+                  </div>
+                </div>
+              </div>
+              <div class="grid__col">
+                <div class="contact-form__row">
+                  <label class="contact-form__label" for="form-company-name">Company name</label>
+                  <div class="contact-form__control">
+                    <input class="contact-form__input" id="form-company-name" type="text" required name="company-name">
+                    <div class="contact-form__error-message">Please enter company name</div>
+                  </div>
+                </div>
+                <div class="contact-form__row">
+                  <label class="contact-form__label" for="form-description">How can we help?</label>
+                  <div class="contact-form__control">
+                    <textarea rows="5" class="contact-form__textarea" id="form-description" name="description"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="contact-form__button">
+              <button type="submit" value="Submit" id="form-submit" class="button button_bold">Submit</button>
+            </div>
+          </div>
+          <div class="contact-form__success">
+            <div class="contact-form__success-box">
+              <div class="contact-form__success-title">Your message has been successfully sent</div>
+              <p class="contact-form__success-text">
+                We will get in touch with you as soon as we can
+              </p>
+            </div>
+          </div>
+        </form>
+
+      </div>
+      <div class="contact__side">
+        {% if props.column %}
+        <div class="touch touch_column">
+          <div class="touch__figure">
+            <div class="touch__bg-wrap">
+              <div class="touch__bg">
+                <img class="touch__bg-img lazyload" data-src="../_img/solutions/{{ props.imgName }}.jpg" data-srcset="../_img/solutions/{{ props.imgName }}@2x.jpg 2x" alt="" data-sizes="auto">
+              </div>
+            </div>
+          </div>
+          <div class="touch__box">
+            <h4 class="touch__heading">Get in touch</h4>
+            <ul class="touch__list">
+              <li class="touch__item">
+                <div class="touch__icon-wrap">
+                  {{ icon({ className: 'touch__icon', name: 'call_dark', width: 28, height: 27 }) }}
+                </div>
+                <div class="touch__row">
+                  <a class="touch__text" href="tel:+441133871070">0113 387 1070</a>
+                </div>
+              </li>
+              {% if props.phoneExtra %}
+              <li class="touch__item">
+                <div class="touch__icon-wrap">
+                  {{ icon({ className: 'touch__icon', name: 'headset_service', width: 28, height: 27 }) }}
+                </div>
+                <div class="touch__row">
+                  <a class="touch__text" href="tel:+441942311151">019 423 11151</a>
+                </div>
+              </li>
+              {% endif %}
+              <li class="touch__item">
+                <div class="touch__icon-wrap">
+                  {{ icon({ className: 'touch__icon', name: 'email_dark', width: 36, height: 25 }) }}
+                </div>
+                <div class="touch__row">
+                  <a class="touch__text" href="mailto:hello@tptg.co.uk">hello@tptg.co.uk</a>
+                </div>
+              </li>
+              <li class="touch__item">
+                <div class="touch__icon-wrap">
+                  {{ icon({ className: 'touch__icon', name: 'time_dark', width: 34, height: 34 }) }}
+                </div>
+                <div class="touch__row">
+                  <span class="touch__text">9am - 5:30pm</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        {% else %}
+        <div class="touch touch_row">
+          <div class="touch__figure">
+            <div class="touch__bg-wrap">
+              <div class="touch__bg">
+                <img class="touch__bg-img lazyload" data-src="../_img/solutions/{{ props.imgName }}.jpg" data-srcset="../_img/solutions/{{ props.imgName }}@2x.jpg 2x" alt="" data-sizes="auto">
+              </div>
+            </div>
+          </div>
+          <div class="touch__box">
+            <h4 class="touch__heading">Get in touch</h4>
+            <ul class="touch__list">
+              <li class="touch__item">
+                <div class="touch__icon-wrap">
+                  {{ icon({ className: 'touch__icon', name: 'call', width: 28, height: 27 }) }}
+                </div>
+                <div class="touch__title">Call us</div>
+                <div class="touch__row">
+                  <a class="touch__text" href="tel:+441133871070">0113 387 1070</a>
+                </div>
+              </li>
+              <li class="touch__item">
+                <div class="touch__icon-wrap">
+                  {{ icon({ className: 'touch__icon', name: 'email', width: 30, height: 21 }) }}
+                </div>
+                <div class="touch__title">Email us</div>
+                <div class="touch__row">
+                  <a class="touch__text" href="mailto:hello@tptg.co.uk">hello@tptg.co.uk</a>
+                </div>
+              </li>
+              <li class="touch__item">
+                <div class="touch__icon-wrap">
+                  {{ icon({ className: 'touch__icon', name: 'tweet', width: 32, height: 27 }) }}
+                </div>
+                <div class="touch__title">Tweet us</div>
+                <div class="touch__row">
+                  <a class="touch__text" href="https://twitter.com/tptg_tweet">@tptg_tweet</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endmacro %}

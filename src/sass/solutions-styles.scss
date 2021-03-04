@@ -1,0 +1,29 @@
+@import 'variables';
+@import 'helpers/mixins';
+@import 'helpers/media';
+@import 'helpers/reset';
+
+// delete fonts for production
+@import 'fonts';
+
+/***=== PLUGINS ===***/
+@import './node_modules/@glidejs/glide/dist/css/glide.core.min';
+
+/***=== COMPONENTS ===***/
+@import '../components/hero/hero';
+@import '../components/unit/unit';
+@import '../components/partners/partners';
+@import '../components/benefits/benefits';
+@import '../components/contact/contact';
+@import '../components/slider/slider';
+@import '../components/video/video';
+@import '../components/advantages/advantages';
+@import '../components/paragraph/paragraph';
+@import '../components/button/button';
+@import '../components/services/services';
+@import '../components/features/features';
+@import '../components/wall/wall';
+@import '../components/statistics/statistics';
+
+/***=== GLOBAL ===***/
+@import 'global';

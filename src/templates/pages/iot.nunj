@@ -1,0 +1,8 @@
+---
+title: IoT
+---
+{% extends "../ext/dev.nunj" %}
+
+{% block content %}
+  {% include "../pages/template_iot.nunj" %}
+{% endblock content %}

@@ -1,0 +1,60 @@
+.partners {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-left: -30px;
+  margin-right: -30px;
+  margin-bottom: -40px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 40px;
+  }
+
+  @include screen-xl {
+    margin-left: -25px;
+    margin-right: -25px;
+
+    &__item {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+  }
+  @include screen-lg {
+    &__item {
+      max-width: 220px;
+    }
+    &__logo {
+      max-height: 77px;
+    }
+  }
+  @include screen-md {
+    margin-left: -20px;
+    margin-right: -20px;
+
+    &__item {
+      max-width: 184px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    &__logo {
+      max-height: 70px;
+    }
+  }
+  @include screen-sm {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -30px;
+    max-width: 350px;
+
+    &__item {
+      width: 50%;
+      margin-bottom: 30px;
+    }
+  }
+}

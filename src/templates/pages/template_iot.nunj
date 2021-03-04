@@ -1,0 +1,129 @@
+{% extends "../ext/prod.nunj" %}
+
+{% block content %}
+
+  {{ hero({
+    center: 'true',
+    title: 'IoT services with real-world benefits.',
+    imgName: 'iot/hero',
+    imgAlt: 'IOT'
+  }) }}
+
+  <div class="frame frame_pb-1">
+    <div class="frame__bg">
+      {{ img({ className: 'frame__bg-img', name: 'bg_purecloud-big', format: 'png', cover: 'true' }) }}
+    </div>
+    <div class="frame__content">
+      <div class="box mb-3">
+        <div class="lead-text column-md color-white">
+          Our IoT service is the combination of multiple solutions, vendors and service providers to provide IoT with real-world benefits and we’re proud to be the first service provider in the UK to offer a number of ‘pre-packaged’ solutions ready for market. Whilst our solutions are pre-packaged, they’re designed to resolve your business challenges through our bespoke development services.
+        </div>
+      </div>
+
+      <div class="mb-4">
+        {{ unit(
+        text="
+<p>
+If your problem falls outside of our pre-packaged solutions our bespoke development is available to solve unique business problems, wrapped within our trusted Professional Services for design, deployment and support.
+</p>
+",
+        imgName='iot/pre-packaged',
+        imgFormat='jpg',
+        reverse='true',
+        shadow='true',
+        paddingSmall='true',
+        frame='true'
+        ) }}
+
+        {{ unit(
+        text="<p>The marketplace has 1000s of sensors and differing types of connectivity and analytics - you need a partner that can design a solution for best fit, from concept to deployment.</p>",
+        imgName='iot/marketplace-sensors',
+        imgFormat='jpg',
+        shadow='true',
+        paddingSmall='true',
+        frame='true'
+        ) }}
+      </div>
+
+      <div class="box">
+        <div class="typo typo_white mb-title">
+          <h2 class="title column-sm">Features</h2>
+        </div>
+        {{ benefits({
+          data: [{
+            iconName: "utilisation",
+            title: "Efficient resource utilisation"
+          },{
+            iconName: "customer-experience",
+            title: "Enhanced customer experience"
+          },{
+            iconName: "productivity",
+            title: "Improved productivity"
+          },{
+            iconName: "data",
+            title: "High-quality data and analytics"
+          }]
+        }) }}
+      </div>
+
+    </div>
+  </div>
+
+  {% set units = [{
+    title: 'Smart Parking',
+    text: "
+<p>
+Our SMART Parking package provides accurate information to assist with the monitoring of parking space occupancy.
+</p>
+<p>
+Collect information to obtain summaries about total space utilisation, average use and peak times to help you manage your parking facility for visitors and employees.
+</p>
+<p>
+An intelligent Parking Sensor is securely mounted to the surface of the road, instantly transmitting activity data via the IoT Gateway located in the building.
+</p>",
+    imgName: 'smart-parking',
+    imgFormat: 'jpg',
+    reverse: 'true'
+  },{
+    title: 'Smart Environment',
+    text: "
+<p>
+The SMART Environment package provides accurate monitoring of people moving in a specific place plus building environmental parameters including temperature, humidity, ambient light, carbon monoxide and sound.
+</p>
+<p>
+Set security alerts to advise you if unexpected movement occurs. Collect data to inform and alert you when there are changes to the environmental conditions in order to provide the perfect working environment. Save money by reducing wasted energy costs, turning lights and heating off in unused areas.
+</p>
+",
+    imgName: 'iot/smart-enviroment',
+    imgFormat: 'jpg',
+    bgGrey: 'true'
+  }] %}
+
+  {% for item in units %}
+    {{ unit(item.title, item.text, item.imgName, item.imgFormat, item.reverse, item.bgGrey, item.shadow, item.paddingSmall) }}
+  {% endfor %}
+
+  <div class="section section_pt_md section_pb_small">
+    <div class="box">
+      {{ partners({
+        data: [{
+          imgName: "logo_arrow",
+          imgAlt: "Arrow"
+        },{
+          imgName: "logo_comms-365",
+          imgAlt: "Comms 365"
+        },{
+          imgName: "logo_lorawan",
+          imgAlt: "LoRaWAN"
+        }]
+      }) }}
+    </div>
+  </div>
+
+  {{ contact({
+    column: 'true',
+    title: 'Get in touch about your next project today, our team is ready to discuss your ideas.',
+    imgName: 'get-in-touch_1'
+  }) }}
+
+{% endblock content %}

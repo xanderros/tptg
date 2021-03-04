@@ -1,0 +1,8 @@
+---
+title: Security
+---
+{% extends "../ext/dev.nunj" %}
+
+{% block content %}
+  {% include "../pages/template_security.nunj" %}
+{% endblock content %}

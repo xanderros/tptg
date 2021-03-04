@@ -1,0 +1,21 @@
+{% macro unit(title,text,imgName,imgFormat,reverse,bgGrey,shadow,paddingSmall,frame) %}
+  <div class="unit{% if reverse %} unit_reverse{% endif %}{% if bgGrey %} bg-light-grey{% endif %}{% if paddingSmall %} unit_small{% endif %}{% if frame %} unit_frame{% endif %}">
+    <div class="unit__container box">
+      <div class="unit__side">
+        {% if shadow %}
+        <div class="unit__img-wrap">
+          {% endif %}
+          <img class="unit__img lazyload" data-src="../_img/solutions/{{ imgName }}.{{ imgFormat }}" data-srcset="../_img/solutions/{{ imgName }}@2x.{{ imgFormat }} 2x" alt="{{ title }}">
+          {% if shadow %}
+        </div>
+        {% endif %}
+      </div>
+      <div class="unit__base content-text">
+        {% if title %}
+        <h3 class="title">{{ title }}</h3>
+        {% endif %}
+        {{ text | safe }}
+      </div>
+    </div>
+  </div>
+{% endmacro %}

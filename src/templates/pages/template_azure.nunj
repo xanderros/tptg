@@ -1,0 +1,113 @@
+{% extends "../ext/prod.nunj" %}
+
+{% block content %}
+
+  {{ hero({
+    center: 'true',
+    title: 'On-premise, hybrid, <br>multicloud or at the edge.',
+    imgName: 'azure/hero',
+    imgAlt: 'azure',
+    imgCenter: 'true'
+  }) }}
+
+  <div class="frame frame_pb-1">
+    <div class="frame__bg">
+      {{ img({ className: 'frame__bg-img', name: 'bg_purecloud', format: 'png', cover: 'true' }) }}
+    </div>
+    <div class="frame__content box">
+      <div class="typo typo_white mb-4">
+        <h2 class="title column-sm">Create secure, future-ready cloud solutions on Azure.</h2>
+        <div class="lead-text mb-4">
+          Microsoft Azure allows you to turn an organisation’s ideas into innovations. You can achieve your goals with the autonomy and flexibility to build, manage, and deploy your applications in the cloud. With help from Azure, you have everything you need to scale your IT infrastructure.
+        </div>
+      </div>
+      {{ benefits({
+        data: [{
+          iconName: "management",
+          title: "99.5% availability"
+        },{
+          iconName: "hybrid",
+          title: "Highly customisable"
+        },{
+          iconName: "terms",
+          title: "Endlessly scalable"
+        },{
+          iconName: "futureproof",
+          title: "Futureproof"
+        }]
+      }) }}
+    </div>
+  </div>
+
+  {% set units = [{
+    title: 'Windows Virtual Desktop',
+    text: "<p>Windows Virtual Desktop (WVD) is a comprehensive desktop and App virtualisation service running in the cloud.
+          It’s the only virtual desktop infrastructure (VDI) that delivers simplified management, multi-session Windows
+          10, optimisations for Microsoft 365 Apps for enterprise and Teams optimisation. Deploy and scale your Windows
+          desktops and Apps on Azure in minutes and get built-in security and compliance features. WVD offers
+          substantial cost and licensing benefits.</p>",
+    imgName: 'azure/wvd',
+    imgFormat: 'jpg',
+    reverse: 'true',
+    bgGrey: 'true'
+  },{
+    title: 'Azure Sentinel',
+    text: "<p>Azure Sentinel is your birds-eye view across the enterprise, it allows you to see and stop threats before
+          they cause harm - it’s SIEM reinvented for the modern world. The use of Artificial Intelligence (AI) makes
+          your threat detection and response smarter and faster. Eliminate security infrastructure setup, maintenance
+          and elastically scale to meet your security needs. All while reducing your IT costs.</p>",
+    imgName: 'azure-sentinel',
+    imgFormat: 'jpg'
+  },{
+    title: 'Azure Active Directory',
+    text: "<p>Protect your business with a universal identity platform. The Azure Active Directory enterprise identity
+          service provides SSO and multi-factor authentication to help protect your users from 99.95% of cybersecurity
+          attacks with the custom banned password list and smart lockout. You also have the ability to manage guest
+          users and external partners, while maintaining control over your organisation’s data.</p>",
+    imgName: 'azure/ad',
+    imgFormat: 'jpg',
+    reverse: 'true',
+    bgGrey: 'true'
+  },{
+    title: 'Azure Backup and SR',
+    text: "
+   <p>We provide a cost-effective and secure one-click backup solution that’s scalable based on your backup storage
+          needs. The centralised management interface makes it easy to define backup policies and protect a wide range
+          of enterprise workloads, including Azure Virtual Machines, SQL and SAP databases, and Azure file shares.
+        </p>
+        <h4>Benefits</h4>
+        <ul>
+          <li>Azure and on-premise backup</li>
+          <li>Application consistency</li>
+          <li>Secure backup storage</li>
+          <li>Cloud backup management</li>
+        </ul>
+",
+    imgName: 'azure-backup',
+    imgFormat: 'jpg'
+  },{
+    title: 'Azure Migrations',
+    text: "<p>We can help you make your first step into the cloud, develop a hybrid cloud approach or help plan and manage
+          a complete infrastructure migration. Azure migrations allow you to migrate your data and workloads to Azure
+          confidently and securely with intelligent security services. Increase your organisations agility with
+          best-in-class Azure infrastructure that scales to your business needs.</p>",
+    imgName: 'azure/migrations',
+    imgFormat: 'jpg',
+    reverse: 'true',
+    bgGrey: 'true',
+    coverCenter: 'true'
+  }] %}
+
+  {% for item in units %}
+    {{ unit(item.title, item.text, item.imgName, item.imgFormat, item.reverse, item.bgGrey, item.shadow, item.paddingSmall) }}
+  {% endfor %}
+
+  <div class="bg-light-grey">
+    {{ contact({
+      column: 'true',
+      title: 'Get in touch about your next project today, our Microsoft Experts are ready to discuss your ideas.',
+      imgName: 'get-in-touch_1'
+    }) }}
+  </div>
+
+{% endblock content %}

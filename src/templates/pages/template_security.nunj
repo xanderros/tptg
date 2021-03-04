@@ -1,0 +1,141 @@
+{% extends "../ext/prod.nunj" %}
+
+{% block content %}
+
+  {{ hero({
+    center: 'true',
+    title: 'The simplest way to protect your business',
+    imgName: 'hero_security',
+    imgAlt: 'Security'
+  }) }}
+
+  <div class="frame frame_pb-2">
+    <div class="frame__bg">
+      {{ img({ className: 'frame__bg-img', name: 'bg_purecloud', format: 'png', cover: 'true' }) }}
+    </div>
+    <div class="frame__content box">
+      <div class="typo typo_white">
+        <h2 class="title column-sm">It’s a matter of ‘when’, not ‘if’</h2>
+        <div class="paragraph paragraph_big column-xsm">
+          Cyber security issues are becoming a day-to-day struggle for businesses. The average time to identify a breach in 2020 was 280 days* - therefore it’s critical that organisations take cyber security seriously and invest in advanced measures that extend well beyond traditional perimeter defences.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="box box_small">
+      <h2 class="title column-sm mb-2">Our tiered security model</h2>
+
+      <div class="security mb-4">
+        <div class="security__item security__item_1">
+          <div class="security__figure">
+            {{ icon({ className: 'security__icon', name: 'security-internet' }) }}
+          </div>
+        </div>
+        <div class="security__item security__item_2">
+          <div class="security__figure">
+            {{ icon({ className: 'security__icon', name: 'tier-1-new' }) }}
+          </div>
+          <div class="security__content">
+            <h3 class="security__title">Tier 1 - Cloud AV-AS-CC-DDOS</h3>
+            <div class="security__desc">Protection before your on-site network</div>
+            <p class="security__text">
+              Protection before your on-site network Cloud security protects you from threats BEFORE your perimeter. It provides you with protection from zero-day attacks, denial-of-service attacks and maximises bandwidth.
+            </p>
+          </div>
+        </div>
+        <div class="security__item security__item_3">
+          <div class="security__figure">
+            {{ icon({ className: 'security__icon', name: 'tier-2-new' }) }}
+          </div>
+          <div class="security__content">
+            <h3 class="security__title">Tier 2 - Perimeter firewall - proxy CC-IPS-IDS</h3>
+            <div class="security__desc">Protection at the perimeter of the network</div>
+            <p class="security__text">
+              Traditional firewall technology with proxy to avoid unwanted content and prevent attacks against the network. Examples of attacks can be hacking, intrusion and malware
+            </p>
+          </div>
+        </div>
+        <div class="security__item security__item_4">
+          <div class="security__figure">
+            {{ icon({ className: 'security__icon', name: 'tier-3-new' }) }}
+          </div>
+          <div class="security__content">
+            <h3 class="security__title">Tier 3 - Endpoint AV-AS-MFA DLP, encryption and MDM</h3>
+            <div class="security__desc">Protection at the end of the network</div>
+            <p class="security__text">
+              Security for computers/devices (Endpoints). This stops vulnerabilities outside of the network. This includes on-demand scanning and protection against threats transmitted by removable media.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <p class="paragraph paragraph_big column-xl">
+        Our tiered security approach uses technologies from leading security vendors and providers to minimise threat, from the cloud through to endpoint device – helping you safeguard your systems, data and people. Beyond that we have a number of managed cyber security services which are designed to help you identify, mitigate and pro-actively defend against security risks and attacks.
+      </p>
+    </div>
+  </div>
+
+  <div class="cover cover_def">
+    <div class="cover__content">
+      <div class="box box_small">
+        {{ features({
+          data: [{
+            title: "Penetration Testing & Assessmants",
+            text: "We identify any weaknesses and vulnerabilities across your IT environment making sure your defences are strengthened against attack helping to mitigate any risk",
+            iconName: "testing"
+          },{
+            title: "Tiered Security",
+            text: "Cloud, Firewall and Endpoint protection - our proven tiered security model puts the necessary control measures in place to help secure your organisation and negate attacks, including zero-day threats",
+            iconName: "tiered-security"
+          },{
+            title: "User Awareness Training",
+            text: "We’ll help you embed a strong culture of cyber awareness with tailored security training and phishing simulation ensuring your staff are the first line of defence",
+            iconName: "training"
+          }]
+        }) }}
+      </div>
+    </div>
+  </div>
+
+  <div class="section section_pt_md section_pb_small bg-light-grey">
+    <div class="box">
+      {{ partners({
+      data: [{
+      imgName: "security/logo_mimecast",
+      imgAlt: "mimecast"
+      },{
+      imgName: "security/logo_sophos",
+      imgAlt: "Sophos"
+      },{
+      imgName: "security/logo_cloudflare",
+      imgAlt: "Cloudflare"
+      },{
+      imgName: "security/logo_barracuda",
+      imgAlt: "Barracuda"
+      },{
+      imgName: "security/logo_bitdefender",
+      imgAlt: "Bitdefender"
+      },{
+      imgName: "security/logo_cep",
+      imgAlt: "Cyber Essentials PLUS"
+      },{
+      imgName: "security/logo_check-point",
+      imgAlt: "Check Point"
+      },{
+      imgName: "security/logo_digitalxraid",
+      imgAlt: "DigitalXRAID"
+      }]
+      }) }}
+    </div>
+  </div>
+  <div class="bg-light-grey">
+    {{ contact({
+      column: 'true',
+      title: 'Get in touch about your next project today, our team is ready to discuss your ideas.',
+      imgName: 'get-in-touch_1'
+    }) }}
+  </div>
+
+{% endblock content %}

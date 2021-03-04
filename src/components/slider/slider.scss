@@ -1,0 +1,319 @@
+.slider {
+  overflow: hidden;
+  padding-bottom: 10px;
+
+  &__wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 830px;
+  }
+  &__track {
+    overflow: visible;
+  }
+  &__list {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  &__item {
+    height: auto;
+    display: flex;
+    align-items: center;
+    background: $color-white;
+    box-shadow: 0 8px 50px rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+    transition: opacity $default-transition, box-shadow $default-transition;
+
+    &:not(.glide__slide--active) {
+      opacity: .3;
+      box-shadow: 0 8px 50px rgba(0, 0, 0, 0.08);
+    }
+  }
+  &__arrows {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: -14px;
+    pointer-events: none;
+    width: 100%;
+  }
+  &__arrow {
+    position: relative;
+    @include button-reset;
+    pointer-events: auto;
+    padding: 0;
+    font-family: $font-sf-compact;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #00B3BF;
+    width: 28px;
+    height: 28px;
+
+    &.glide__arrow {
+      border-radius: 50%;
+    }
+
+    &.glide__arrow--left {
+      transform: translateX(-100%);
+      margin-left: -24px;
+    }
+    &.glide__arrow--right {
+      margin-left: auto;
+      margin-right: -24px;
+      transform: translateX(100%);
+
+      .slider__arrow-icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  &__arrow-icon {
+    stroke: $color-white;
+  }
+
+  &_arrows {
+    &_white {
+      .slider {
+        &__arrow {
+          background-color: $color-white;
+        }
+        &__arrow-icon {
+          stroke: $color-black;
+        }
+      }
+    }
+    &_violet {
+      .slider {
+        &__arrow {
+          background-color: #6E5FA7;
+        }
+      }
+    }
+    &_pink {
+      .slider {
+        &__arrow {
+          background-color: #914B97;
+        }
+      }
+    }
+  }
+
+  @include screen-xl {
+    &__wrapper {
+      width: 68%;
+    }
+  }
+  @include screen-sm {
+    &__wrapper {
+      width: 72%;
+    }
+    &__arrows {
+      display: none;
+    }
+    &__list {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+    &__item {
+      align-items: flex-start;
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
+
+      &:not(.glide__slide--active) {
+        opacity: .4;
+        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
+      }
+    }
+  }
+}
+
+.story {
+  display: block;
+  text-decoration: none;
+  color: $color-black;
+  width: 100%;
+  padding: 62px 42px 33px;
+  text-align: center;
+
+  &:focus,
+  &:visited,
+  &:hover {
+    cursor: pointer;
+    color: $color-black;
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.024em;
+  }
+  &__footer {
+    margin-top: 24px;
+  }
+  &__source {
+    font-size: 16px;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    color: $color-dark-grey;
+  }
+  &__author {
+    font-weight: 700;
+  }
+  &__ref {
+    margin-top: 23px;
+  }
+  &__link {
+    position: relative;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+
+    &:after {
+      content: '';
+      position: absolute;
+      transform: translateY(8px) rotate(180deg);
+      margin-left: 7px;
+      width: 5px;
+      height: 9px;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-position: right top;
+      background-size: 5px auto;
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNyIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDcgMTIiIHN0cm9rZT0iIzJkMzAzMCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTYgMUwxIDYuMDcyNDZMNiAxMSIgLz48L3N2Zz4=');
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__link-arrow {
+
+  }
+  &__figure {
+    min-height: 33px;
+    margin-top: 29px;
+  }
+
+  @include screen-xl {
+    padding-top: 58px;
+
+    &__text {
+      font-size: 30px;
+      line-height: 38px;
+    }
+  }
+  @include screen-lg {
+    padding: 47px 30px 40px;
+
+    &__text {
+      font-size: 26px;
+      line-height: 1.4;
+    }
+    &__source {
+      font-size: 15px;
+    }
+    &__footer {
+      margin-top: 22px;
+    }
+    &__ref {
+      margin-top: 21px;
+    }
+    &__figure {
+      margin-top: 28px;
+    }
+  }
+  @include screen-sm {
+    padding: 35px 20px 30px;
+
+    &__text {
+      font-size: 18px;
+      line-height: 1.5;
+      letter-spacing: -0.02em;
+    }
+    &__source {
+      font-size: 14px;
+      letter-spacing: -0.02em;
+    }
+    &__footer {
+      margin-top: 20px;
+    }
+    &__ref {
+      margin-top: 19px;
+    }
+    &__figure {
+      margin-top: 26px;
+    }
+  }
+  @include screen-xs {
+    padding: 32px 20px 28px;
+
+    &__text {
+      font-size: 16px;
+    }
+  }
+}
+
+.desc {
+  align-self: flex-start;
+  padding: 35px 90px 53px;
+  text-align: center;
+
+  &__figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 47px;
+    margin-bottom: 17px;
+  }
+  &__title {
+    font-family: $font-interstate;
+    font-size: 30px;
+    line-height: 1.35;
+    letter-spacing: -0.065em;
+    margin-bottom: 14px;
+    color: $color-black;
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 2;
+    color: $color-grey;
+    letter-spacing: -0.02em;
+  }
+
+  @include screen-xxl {
+    padding: 35px 70px 53px;
+  }
+  @include screen-xl {
+    padding: 35px 60px 50px;
+  }
+  @include screen-lg {
+    padding: 35px 50px 45px;
+
+    &__title {
+      font-size: 26px;
+    }
+    &__text {
+      font-size: 15px;
+      line-height: 1.8;
+    }
+  }
+  @include screen-md {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  @include screen-sm {
+    padding: 35px 20px 33px;
+
+    &__title {
+      font-size: 24px;
+      margin-bottom: 13px;
+    }
+    &__text {
+      font-size: 14px;
+      line-height: 1.65;
+    }
+  }
+}

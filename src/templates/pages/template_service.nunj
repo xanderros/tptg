@@ -1,0 +1,305 @@
+{% extends "../ext/prod.nunj" %}
+
+{% block content %}
+
+  {{ hero({
+    title: 'Ultra-fast IT support first time, on time, every time.',
+    text: "Build your own bespoke service package with a comprehensive range of support and professional services, which can be provided for any platform – designed, deployed and fully managed by our world-class service team.",
+    buttonText: 'Let’s talk service',
+    buttonLink: '#contact',
+    imgName: 'hero_service',
+    imgAlt: 'Service'
+  }) }}
+
+  <div class="frame pb-video">
+    <div class="frame__bg">
+      {{ img({ className: 'frame__bg-img', name: 'bg_purecloud', format: 'png', cover: 'true' }) }}
+    </div>
+    <div class="frame__content box box_small">
+      <div class="typo typo_white mb-2">
+        <h2 class="title column-sm">Features of our service packages</h2>
+      </div>
+      <div class="mb-5">
+        {{ features({
+          data: [{
+            title: "Design",
+            text: "We ensure that solutions are viable to budget, meet your desired outcomes, not only for now but for the future too",
+            iconName: "design"
+          },{
+            title: "Deploy",
+            text: "Get project management and onsite support resources to ensure your deployment is completed on time and within budget",
+            iconName: "deploy"
+          },{
+            title: "Manage",
+            text: "From initial build and deployment, through to ethical disposal with a strong emphasis on accuracy, security and quality",
+            iconName: "manage"
+          }]
+        }) }}
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-light-grey">
+    <div class="box indent-video">
+      {{ video({
+        id: '504404531',
+        imgName: 'vimeo-thumb_service',
+        imgAlt: 'PTG Service'
+      }) }}
+    </div>
+  </div>
+
+  <div class="section bg-light-grey pb-features">
+    <div class="box">
+      {{ advantages({
+        data: [{
+          iconName: "available_dark",
+          title: "Available"
+        },{
+          iconName: "fast_dark",
+          title: "Fast"
+        },{
+          iconName: "secure_dark",
+          title: "Secure"
+        },{
+          iconName: "resilient_dark",
+          title: "Resilient"
+        },{
+          iconName: "scalable_dark",
+          title: "Scalable"
+        }]
+      }) }}
+      <div class="typo pb-3">
+        <h2 class="title column-sm">Our solutions are tailored to your organisation</h2>
+        <div class="paragraph column-sm">
+          Technology is designed and configured to suit you and we understand that it’s ‘never one size fits all’. Research of various options is always considered. Highly experienced, qualified and certified Solutions Architects provide tailored end-to-end solutions to match the technical and commercial needs of each customer.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="box box_small mb-5">
+    {{ features({
+      topIndent: 'true',
+      data: [{
+        title: "Ultra-Fast IT Support",
+        text: "Speak directly to one of our engineers every time you call. You won't spend hours waiting for your issues to be fixed, allowing you to focus on with what's important to your organisation",
+        iconName: "it-support"
+      },{
+        title: "Proactive Monitoring",
+        text: "Your system will be monitored automatically spotting and fixing potential issues before they prevent your organisation from operating",
+        iconName: "monitoring-proactive"
+      },{
+        title: "24/7 Support",
+        text: "Your organisation is fully supported 24 hours a day, 7 days a week, all year round. You don't have to wait for business hours to get your technology back up and working again",
+        iconName: "support-24-7"
+      }]
+    }) }}
+  </div>
+
+  {{ wall({
+    title: "Deployment",
+    text: "We manage a large variety of IT projects, ranging from relatively simple endpoint rollouts at a scale from tens, hundreds and thousands, to highly complex datacentre projects for mission-critical environments where fault-tolerance, security and geographic resilience are essential.",
+    imgName: "deployment"
+  }) }}
+
+  <div class="section">
+    <div class="box box_small">
+      {{ services({
+        data: [{
+          title: "Endpoint services",
+          text: "For endpoint services, we supply, configure, deliver and deploy the entire endpoint device estate, including software licensing, device imaging, asset-tagging, refurbishment, secure and ethical disposal.",
+          iconName: "endpoint-services"
+        },{
+          title: "Carbon conscious",
+          text: "All logistics, deployment and training are undertaken with the lowest Carbon Footprint possible and professionally project managed. The result is a modern refreshed endpoint estate, managed and future proofed.",
+          iconName: "carbon-conscious"
+        },{
+          title: "Imaging",
+          text: "A variety of imaging services are available; ranging from at source through global manufacturers and distributors to more bespoke local services, using replication, Microsoft Deployment Services and SCCM.",
+          iconName: "imaging"
+        },{
+          title: "Life-cycle management",
+          text: "In tandem with other services we can offer full life-cycle management of endpoint and datacentre infrastructure including imaging, RFID tagging, refurbishment, secure decommission and ethical disposal.",
+          iconName: "lifecycle-management"
+        }]
+      }) }}
+    </div>
+  </div>
+
+  <div class="section bg-light-grey">
+    <div class="box box_small">
+      <h2 class="title column-sm mb-3">Average monthly statistics</h2>
+      <div class="mb-5">
+        {{ statistics({
+          data: [{
+            title: "7 secs",
+            text: "Average call waiting time",
+            iconName: "waiting-time"
+          },{
+            title: "96.9%",
+            text: "NPS",
+            iconName: "nps"
+          },{
+            title: "9716",
+            text: "Tickets resolved",
+            iconName: "tickets"
+          },{
+            title: "99.75%",
+            text: "SLA",
+            iconName: "sla"
+          },{
+            title: "100%",
+            text: "Site service",
+            iconName: "site-service"
+          },{
+            title: "98.45%",
+            text: "First call to fix",
+            iconName: "call-fix"
+          }]
+        }) }}
+      </div>
+
+      {{ services({
+        data: [{
+          title: "Managed backup",
+          text: "Reliable and consistent backup is taken on a regular basis with daily monitoring and backup management. Once completed you receive a backup report and any failures will be automatically logged and investigated.",
+          iconName: "managed-backup"
+        },{
+          title: "Managed server/endpoint",
+          text: "Server and Endpoint estate is managed effectively and we provide on-site support, coupled with the ServiceDesk. This combines into a seamless product that ensures your servers, endpoints and people maintain productivity.",
+          iconName: "managed-server"
+        },{
+          title: "Managed AV",
+          text: "Anti-Virus service is provided so we can monitor and manage your AV estate. This includes keeping AV and the AV console up to date (subject to subscription). Once completed you receive an AV report and issues are automatically logged and investigated.",
+          iconName: "managed-av"
+        },{
+          title: "Managed patch",
+          text: "Patch management service provides the confidence that your servers and endpoints are being regularly assessed and patched. Patches are centrally managed and are approved/denied in correspondence within a defined change process.",
+          iconName: "managed-patch"
+        }]
+      }) }}
+    </div>
+  </div>
+
+  <div class="cover cover_dark">
+    <div class="cover__content">
+      <div class="note box">
+        <div class="note__base">
+          <h2 class="note__title title">World-class service</h2>
+          <div class="note__subtitle">First time, on time, every time</div>
+          <div class="note__text paragraph">
+            A combination of highly skilled engineers, collaborative culture and dedication results in our consistently high customer satisfaction rates - our teams maintain your systems pro-actively and answer any queries you may have; and they do it better than anyone else. Our Net Promotor Score℠ has never been below 90% since it launched in 2017.
+          </div>
+        </div>
+        <div class="note__side">
+          {{ img({ className: 'note__img', name: 'NPS-JAN-png-01-registered', format: 'png' }) }}
+        </div>
+      </div>
+      {{ slider({
+        arrowsColor: 'white',
+        data: [{
+          quote: "Mark was so helpful &amp; helped me understand how we could solve the issue we were having with the shortcut to SharePoint. Great service!",
+          author: 'Simone',
+          place: 'Leeds Community Foundation',
+          imgName: 'logo_lcf'
+        },{
+          quote: "Matthew Addy was extremely helpful and resolved my issue very promptly - can’t thank him enough for the help.",
+          author: 'Danielle',
+          place: 'PEC',
+          imgName: 'logo_pec'
+        },{
+          quote: "Matthew Addy was a gem. He’s patient, diligent, nothing was too much trouble. He’s a valuable asset to PTG, I hope he’s as appreciated at your end as he was here today.",
+          author: 'Rachaelle Milton',
+          place: 'Eccles Heddon',
+          imgName: 'logo_eccles-heddon'
+        },{
+          quote: "We only signed up with PTG before Christmas, but service so far has been great - A huge difference from our previous IT Support! Thanks for your help.",
+          author: 'Sophie Moffatt',
+          place: 'Mc Construction',
+          imgName: 'logo_mc-construction'
+        },{
+          quote: "Mark has been so patient &amp; helpful. He’s gone above &amp; beyond, I’m very grateful. Thanks for all your help this year! Your great to work with.",
+          author: 'Sophie',
+          place: 'JDUKltd',
+          imgName: 'logo_jdukltd'
+        },{
+          quote: "Big thanks to Matthew, who was incredibly helpful & knowledgeable. Matthew sorted several issues, was polite & patient with me. I’ll be asking for Matthew from now on!",
+          author: 'Louise Cramond',
+          place: 'Ground Work',
+          imgName: 'logo_ground-work'
+        },{
+          quote: "Sean, most helpful once my own abilities failed to resolve the problem. Fixed another annoying issue I had too. All with good spirts &amp; customer engagement.",
+          author: 'Kevin Henderson',
+          place: 'Trafford Leisure',
+          imgName: 'logo_trafford-leisure'
+        },{
+          quote: "We all recommend PTG because the service has been great. Matthew helped me this evening, quickly, thoroughly and with good chat. Thanks!",
+          author: 'Eleanor Nickerson',
+          place: 'Boost Drinks',
+          imgName: 'logo_boost-drinks'
+        },{
+          quote: "Really helpful staff on helpdesk &amp; our account manager is brilliant. So practical-which we need as a small charity, really goes the extra mile.",
+          author: 'Clare Dearostegui',
+          place: 'Advonet',
+          imgName: 'logo_jdukltd'
+        },{
+          quote: "Seamless quick resolution, as ever.",
+          author: 'M Roe',
+          place: 'Mansec Capital',
+          imgName: 'logo_mansec-capital'
+        }]
+      }) }}
+    </div>
+  </div>
+
+  {{ unit(
+    title='Vendor agnostic solutions',
+    text="<p>Our solutions and services are designed to best fit and benefit your organisation. We use the best technologies on the market, observe your budget and ensure the technology enhances your business. We’ve forged high-level, direct relationships with the world’s top manufacturers, so our engineers are ‘always on the pulse’ with the latest technologies.</p>",
+    imgName='vendor',
+    imgFormat='jpg',
+    reverse='true',
+    bgGrey='true'
+  ) }}
+
+  <div class="section section_pt_md section_pb_0">
+    <h2 class="title column-sm">Our success stories</h2>
+    {{ slider({
+      arrowsColor: 'violet',
+      data: [{
+        quote: "Thanks to everyone involved with the meeting rooms project. A lot of work has gone into it with a tight timescale. Thanks all for your efforts & doing a great job.",
+        author: 'Matthew Davies, Group IT Director',
+        place: 'PHS',
+        imgName: 'logo_phs'
+      },{
+        quote: "Everyone is happy with the service PTG is providing & this is reflected in the NPS results, with 90%+ satisfaction.",
+        author: 'Mike Hinchcliffe, Director',
+        place: 'Group IT',
+        imgName: 'logo_group-it'
+      },{
+        quote: "PTG’s professionalism was extremely refreshing. The review was detailed & allowed us to understand our position & how we future proof our growing business.",
+        author: 'Terry Dugdale, Group Chief Operating Officer',
+        place: 'Fulcrum',
+        imgName: 'logo_fulcrum'
+      },{
+        quote: "Before using PTG, I used to receive complaints every week regarding IT issues from my team– now it isn’t even on my radar, I don’t need to think about it anymore",
+        author: 'Sharon Milner, CEO',
+        place: 'CHSF',
+        imgName: 'logo_chsf'
+      },{
+        quote: "Our customers have congratulated us on our efforts in communities & PTG have played their part in helping. I’m proud of the support in unprecedented circumstances.",
+        author: 'Paul Allen, Group IT Director',
+        place: 'Poundland',
+        imgName: 'logo_poundland'
+      }]
+    }) }}
+  </div>
+
+  {{ contact({
+    column: 'true',
+    phoneExtra: 'true',
+    title: 'Get in touch about your next project today, our team is ready to discuss your ideas.',
+    imgName: 'get-in-touch_2'
+  }) }}
+
+{% endblock content %}

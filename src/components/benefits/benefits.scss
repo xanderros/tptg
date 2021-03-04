@@ -1,0 +1,123 @@
+.benefits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: -15px;
+  margin-left: -25px;
+  margin-right: -25px;
+
+  &__item {
+    width: 192px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-bottom: 50px;
+  }
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+    margin-bottom: 18px;
+  }
+  &__title {
+    font-family: $font-interstate;
+    font-size: 18px;
+    line-height: 24px;
+    color: $color-white;
+    text-align: center;
+  }
+
+  &_dark {
+    .benefits {
+      &__title {
+        color: $color-black;
+      }
+    }
+  }
+  &_circle {
+    margin-top: 0;
+    margin-bottom: -30px;
+
+    .benefits {
+      &__item {
+        width: 174px;
+        margin-bottom: 62px;
+      }
+      &__top {
+        height: 76px;
+        width: 76px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 31px;
+        border-radius: 50%;
+        background-color: $color-white;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      }
+      &__title {
+        font-size: 22px;
+        line-height: 1.27;
+      }
+    }
+  }
+
+  @include screen-sm {
+    margin-top: -5px;
+    margin-left: -20px;
+    margin-right: -20px;
+
+    &__item {
+      width: 182px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    &_circle {
+      margin-top: 0;
+      margin-bottom: -12px;
+
+      .benefits {
+        &__item {
+          margin-bottom: 55px;
+        }
+        &__top {
+          margin-bottom: 26px;
+        }
+        &__title {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  @include screen-xs {
+    &__item {
+      width: 50%;
+      margin-bottom: 45px;
+    }
+    &__top {
+      margin-bottom: 18px;
+    }
+    &__title {
+      font-size: 17px;
+    }
+
+    &_circle {
+      max-width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: -30px;
+
+      .benefits {
+        &__item {
+          width: 50%;
+          margin-bottom: 45px;
+        }
+        &__top {
+          margin-bottom: 25px;
+        }
+        &__title {
+          font-size: 19px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,177 @@
+{% extends "../ext/prod.nunj" %}
+
+{% block content %}
+
+  {{ hero({
+    center: 'true',
+    title: 'Supercharge your productivity.',
+    imgName: 'm365/hero',
+    imgAlt: 'M365'
+  }) }}
+
+  <div class="frame frame_pb-1">
+    <div class="frame__bg">
+      {{ img({ className: 'frame__bg-img', name: 'bg_purecloud', format: 'png', cover: 'true' }) }}
+    </div>
+    <div class="frame__content box">
+      <div class="typo typo_white mb-4">
+        <h2 class="title column-sm">All the benefits of M365</h2>
+        <div class="lead-text mb-4">
+          Microsoft 365 allows you to stay connected and get more out of your Microsoft licenses using intelligent Apps and integrated cloud services - all equipped with the highest standard of built-in security. Re-imagine the way you work with Microsoft 365 and Microsoft Teams.
+        </div>
+      </div>
+      <div class="column-xl">
+        {{ benefits({
+          circle: 'true',
+          png: 'true',
+          data: [{
+            iconName: "ms-word",
+            title: "Word"
+          },{
+            iconName: "ms-excel",
+            title: "Excel"
+          },{
+            iconName: "ms-powerpoint",
+            title: "PowerPoint"
+          },{
+            iconName: "ms-sharepoint",
+            title: "SharePoint"
+          },{
+            iconName: "ms-outlook",
+            title: "Outlook"
+          },{
+            iconName: "ms-teams",
+            title: "Teams"
+          },{
+            iconName: "ms-onedrive",
+            title: "OneDrive"
+          }]
+        }) }}
+      </div>
+    </div>
+  </div>
+
+  <div class="section section_pb_small">
+    <div class="box">
+      <h2 class="title column-sm mb-title">Benefits</h2>
+      {{ benefits({
+        dark: 'true',
+        data: [{
+          iconName: "apps",
+          title: "Office applications"
+        },{
+          iconName: "storage",
+          title: "Cloud collaboration and storage"
+        },{
+          iconName: "automation",
+          title: "Business & process automation"
+        },{
+          iconName: "security",
+          title: "Advanced security"
+        },{
+          iconName: "information",
+          title: "Information governance"
+        }]
+      }) }}
+    </div>
+  </div>
+
+  {% set units = [{
+    title: 'Microsoft 365 Security Roadmap',
+    text: "
+<p>
+Our Security Roadmap is designed to help your organisation by leveraging your Microsoft 365 investment lines. This is done by assessing your current security posture, giving you a score and then working with you to turn on Microsoft 365 technologies that help to secure your environment. 
+</p>
+<p>
+Our ‘zero-trust’ approach considers those with the least privileged access and assumes a breach - ensuring only the right level of access is given to staff at the right time. This mitigates risk and will expedite recovery in the event of a breach.
+</p>
+",
+    imgName: 'm365/security-roadmap',
+    imgFormat: 'jpg',
+    reverse: 'true',
+    bgGrey: 'true'
+  },{
+    title: 'Productivity Roadmap and Data Strategy',
+    text: "
+<p>
+  Our Productivity Roadmap has been designed to ensure customers get the most out of their Microsoft 365 subscription. In this roadmap our team measures your current software utilisation and will help make improvements to your usage.        </p>
+<p>
+  Are you paying for specialist software, where a similar technology is already included in your Microsoft 365 subscription?
+</p>
+<p>
+  Data sprawls are becoming more and more common with company data and files being stored on premise, in OneDrive, on SharePoint and shared via Teams. We can help develop a data strategy that limits data sprawl and considers the necessary security and governance.
+</p>
+",
+    imgName: 'm365/productivity-roadmap',
+    imgFormat: 'jpg'
+  },{
+    title: 'Windows Autopilot',
+    text: "
+<p>
+  Our Autopilot model provides your organisation with a collection of technologies that can be used to set up new devices and get them ready for productive use. This function can also be used to reset, repurpose, and recover devices meaning IT departments can achieve this with minimal infrastructure to manage allowing for increased efficiency.
+</p>
+<p>
+This simplified device lifecycle, for both IT and end users means:
+</p>
+<ul>
+  <li>
+    IT spends less time on deploying, managing, and retiring devices
+  </li>
+  <li>
+    Reduction in infrastructure required to maintain the devices
+  </li>
+  <li>
+    Maximises ease of use for all types of end users
+  </li>
+</ul>
+",
+    imgName: 'windows-autopilot',
+    imgFormat: 'jpg',
+    reverse: 'true',
+    bgGrey: 'true'
+  },{
+    title: 'SharePoint in a Box',
+    text: "
+    <p>Our ‘SharePoint in a Box’ product has been developed as a quick and easy way to deploy your first SharePoint site. Designed to be as easy to adopt as possible, the platform is deployed with just the essential SharePoint communications, including your company branding.</p>
+<h4>Benefits</h4>
+<ul>
+<li>Quick to deploy</li>
+<li>Basic SharePoint communications site</li>
+<li>Customer branded</li>
+<li>1hr end user training included</li>
+</ul>
+",
+    imgName: 'm365/sharepoint',
+    imgFormat: 'jpg'
+  },{
+    title: 'Teams Enablement',
+    text: "
+<p>
+  Working from anywhere on any device being able to effectively communicate and collaborate with colleagues is a key objective for dispersed teams.
+</p>
+<p>
+  We help you get the most out of Teams. Most people only use Teams for online meetings and instant messaging, but it's so much more than that.
+</p>
+<p>
+  We assess your Teams usage and find gaps in utilisation, help IT departments to leverage the best management tools and apply the appropriate security and governance policies. But it doesn’t stop there – our team can retrain end users, help educate on Teams etiquettes and develop a champions programme to ensure your organisation stays abreast of the latest features.
+</p>
+",
+    imgName: 'm365/teams',
+    imgFormat: 'jpg',
+    reverse: 'true',
+    bgGrey: 'true'
+  }] %}
+
+  {% for item in units %}
+    {{ unit(item.title, item.text, item.imgName, item.imgFormat, item.reverse, item.bgGrey, item.shadow, item.paddingSmall) }}
+  {% endfor %}
+
+  <div class="bg-light-grey">
+    {{ contact({
+      column: 'true',
+      title: 'Get in touch about your next project today, our Microsoft Experts are ready to discuss your ideas.',
+      imgName: 'get-in-touch_1'
+    }) }}
+  </div>
+
+{% endblock content %}

@@ -1,0 +1,249 @@
+{% extends "../ext/prod.nunj" %}
+
+{% block content %}
+
+  {{ hero({
+    title: 'Scale your organisation with the cloud',
+    text: "Everyone knows the cloud is the place to be. It isn't new but it has evolved and it isn't one destination, we believe it's many - multi-cloud, private cloud and hyperscale. Our cloud solutions are designed to meet your organisation's digital, operational and commercial objectives - perfectly and securely.",
+    buttonText: 'Let’s talk cloud',
+    buttonLink: '#contact',
+    imgName: 'hero_cloud-bg',
+    imgAlt: 'cloud'
+  }) }}
+
+  <div class="frame pb-video">
+    <div class="frame__bg">
+      {{ img({ className: 'frame__bg-img', name: 'bg_purecloud', format: 'png', cover: 'true' }) }}
+    </div>
+    <div class="frame__content box">
+      <div class="typo typo_white mb-2">
+        <h2 class="title column-sm">All the benefits of cloud</h2>
+        <div class="paragraph paragraph_big column-xsm">Having one provider for private, public and hybrid cloud has its benefits:</div>
+      </div>
+      <div class="mb-2">
+        {{ benefits({
+          data: [{
+            iconName: "provider",
+            title: "Single provider for all cloud services"
+          },{
+            iconName: "support",
+            title: "24/7/365 live support within the UK"
+          },{
+            iconName: "monitoring",
+            title: "Proactive and continuous monitoring"
+          },{
+            iconName: "pricing-models",
+            title: "Cost-efficient and flexible pricing models"
+          },{
+            iconName: "consumption",
+            title: "Real time licensing consumption"
+          }]
+        }) }}
+      </div>
+    </div>
+  </div>
+
+  <div class="box indent-video">
+    {{ video({
+      id: '504396836',
+      imgName: 'vimeo-thumb_cloud',
+      imgAlt: 'PTG Cloud'
+    }) }}
+  </div>
+
+  <div class="section section_pb_small">
+    <div class="box typo">
+      <h2 class="title column-sm">5 ways to thrive in the cloud</h2>
+      <div class="paragraph column-xsm">Cloud provides greater flexibility, more agility and new opportunities for innovation, so it’s no surprise that more than 90 percent of today’s enterprises have adopted cloud in some form.</div>
+    </div>
+  </div>
+
+  {% set units = [{
+    title: 'IT as a Service (ITaaS)',
+    text: "<p>Our ITaaS model provides your organisation with exactly the amount of enterprise-class hardware, software, and support that it needs for a monthly subscription fee. Using our team of experts, we design a platform specifically for you hosted in UK based datacentres. We can add public cloud services such as, Microsoft 365, Microsoft Azure, Amazon Web Services and the Google G-Cloud platform.</p>",
+    imgName: 'itaas',
+    imgFormat: 'jpg',
+    reverse: 'true',
+    bgGrey: 'true'
+  },{
+    title: 'Platform as a Service (PaaS)',
+    text: "<p>Built on the same enterprise architecture as ITaaS - PaaS provides a more dedicated and customisable datacentre platform, offering additional scale and flexibility for customers with elevated demand or specific technology requirements.</p>",
+    imgName: 'paas',
+    imgFormat: 'jpg'
+  },{
+    title: 'Backup as a Service (BaaS)',
+    text: "<p>Get all the data protection you need in one seamless cloud solution. Make sure your data is offsite, secure
+          and safe with a Backup as a Service solution. BaaS uploads and stores your data off-site, to military-grade
+          encryption standards, at our UK datacentres. Choose from our range of online or disk-to-disk backup solutions
+          to build a cost-effective solution that meets your offsite backup requirements and secures your most important
+          digital asset – your data!</p>",
+    imgName: 'baas',
+    imgFormat: 'jpg',
+    reverse: 'true',
+    bgGrey: 'true'
+  },{
+    title: 'Disaster Recovery as a Service (DRaaS)',
+    text: "<p>DRaaS provides your organisation with a comprehensive availability strategy, embracing virtualisation and
+          storage investments in the datacentre and extending them. DRaaS is an affordable and efficient image-based
+          Virtual Machine replication solution that delivers true cloud-based disaster recovery for ALL applications
+          within a stringent Recovery Point Objective (RPO) and Recovery Time Objective (RTO), which can be minutes
+          rather than hours.</p>",
+    imgName: 'draas',
+    imgFormat: 'jpg'
+  },{
+    title: 'Hyperscale',
+    text: '
+    <p>Hyperscale provides a huge catalogue of services from global cloud providers such as AWS, Google and
+          Microsoft to create a single solution for provision of ITaaS, PaaS and Software as a Service (SaaS) including
+          the ubiquitous Microsoft 365 suite, security, backup and support services offered through our subscription
+          pricing model. All cloud models are designed as a completely new infrastructure, or a migration of your
+          current on-premise or legacy architecture, fully supported by our team of industry-leading support
+          personnel.</p>
+<div class="btn-list">
+  <div class="btn-list__item">
+    <a href="cloud/m365" class="button button_primary">M365</a>
+  </div>
+  <div class="btn-list__item">
+    <a href="cloud/azure" class="button button_primary">Azure</a>
+  </div>
+</div>
+',
+    imgName: 'hyperscale',
+    imgFormat: 'jpg',
+    reverse: 'true',
+    bgGrey: 'true'
+  }] %}
+
+  {% for item in units %}
+    {{ unit(item.title, item.text, item.imgName, item.imgFormat, item.reverse, item.bgGrey, item.shadow, item.paddingSmall) }}
+  {% endfor %}
+
+  <div class="section section_pb_small bg-grey-gradient">
+    <div class="box">
+      <h2 class="title column-sm mb-3">Choose the right environment</h2>
+      <div class="env mb-3">
+        {{ img({ className: 'env__bg', name: 'env_circles', format: 'png' }) }}
+        <div class="env__item env__item_violet">Multicloud</div>
+        <div class="env__item env__item_green">Hybrid</div>
+        <div class="env__item env__item_border">On-premise</div>
+      </div>
+      <div class="paragraph paragraph_big column-xl">
+        Deciding which deployment model you will go with is one of the most important cloud decisions you will make. Each cloud deployment model satisfies different organisational needs, so it’s important that you choose a model that will satisfy the needs of your organisation. The great news is that we can use one method, many or all, accounting for all of your needs.
+      </div>
+    </div>
+  </div>
+
+  <div class="section bg-light-grey">
+    <div class="box">
+      {{ advantages({
+        data: [{
+          iconName: "available",
+          title: "Available"
+        },{
+          iconName: "fast",
+          title: "Fast"
+        },{
+          iconName: "secure",
+          title: "Secure"
+        },{
+          iconName: "resilient",
+          title: "Resilient"
+        },{
+          iconName: "scalable",
+          title: "Scalable"
+        }]
+      }) }}
+      <div class="typo">
+        <h2 class="title column-sm">World-class cloud design</h2>
+        <div class="paragraph paragraph_big column-xsm">We provide a cloud environment focussed on your strategic aims. We understand that every organisation is unique and ensure we have an understanding of your organisation, technology and vision before beginning the design.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section section_small">
+    <div class="box">
+      <h3 class="subtitle column-sm mb-title">Our partners</h3>
+      {{ partners({
+        data: [{
+          imgName: "logo_aws",
+          imgAlt: "AWS"
+        },{
+          imgName: "logo_azure",
+          imgAlt: "Azure"
+        },{
+          imgName: "logo_gsuite",
+          imgAlt: "GSuite"
+        },{
+          imgName: "logo_veeam",
+          imgAlt: "VEEAM"
+        },{
+          imgName: "logo_vmware",
+          imgAlt: "vmware"
+        }]
+      }) }}
+    </div>
+  </div>
+
+  <div class="unit unit_reverse bg-light-grey">
+    <div class="unit__container box">
+      <div class="unit__side">
+        <div class="unit__video video-file video-file_accreditations">
+          <video class="video-file__item" autoplay loop muted playsinline>
+            <source src="../_img/solutions/accreditations-logos.webm" type="video/webm">
+            <source src="../_img/solutions/accreditations-logos.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="unit__base content-text">
+        <h3 class="title">Accreditations</h3>
+        <p class="paragraph">
+          We’re proud to have direct relationships with some of the leading global technology vendors and manufacturers. By working strategically with a select number of partners it ensures that our engineers are regularly trained and kept up to date to support and deploy all of our technologies.
+        </p>
+        <p class="paragraph">
+          We can offer the most competitive pricing on the market and that we have a direct link with the vendor, keeping them involved from design through to deployment of any solution.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section section_pt_md section_pb_0">
+    <h2 class="title column-sm">Our success stories</h2>
+    {{ slider({
+      data: [{
+        quote: "PTG are not only knowledgeable but also efficient. Our project was done with no interruptions to our services. The project was completed smoothly and efficiently.",
+        author: 'Becky Clamp, I.T. Manager',
+        place: 'John Mason International',
+        imgName: 'logo_john-mason',
+        link: '#'
+      },{
+        quote: "They over-delivered & sourced new products we didn’t realise were available. We look forward to reaping the rewards of its superior performance.",
+        author: 'Jonathan Lumb, IT Manager',
+        place: 'Virtual College',
+        imgName: 'logo_virtual-college',
+        link: '#'
+      },{
+        quote: "In the event of a disaster, we know we’ll have access to our event management system in minutes so the business can carry on normally, giving us peace of mind.",
+        author: 'Steven Bennett, Head of IT',
+        place: 'Manchester Central',
+        imgName: 'logo_manchester-central',
+        link: '#'
+      },{
+        quote: "PTG is not only a leading technology partner but they’re visionaries. They saw what we were trying to achieve. The team were patient & worked with great professionalism.",
+        author: 'Mwakere Mrengo, Network & Systems Administrator',
+        place: 'Rotala',
+        imgName: 'logo_rotala'
+      },{
+        quote: "With our new security strategy & solutions in place, I’m confident we can protect against cyber-threats. We needed to look to the future, & the future is cloud.",
+        author: 'Steve Norton, Group Network Manager',
+        place: 'John Cotton Ltd.',
+        imgName: 'logo_john-cotton'
+      }]
+    }) }}
+  </div>
+
+  {{ contact({
+    title: 'Get in touch about your next project today, our team is ready to discuss your ideas.',
+    imgName: 'get-in-touch_1'
+  }) }}
+
+{% endblock content %}

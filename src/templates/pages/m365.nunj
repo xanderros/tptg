@@ -1,0 +1,8 @@
+---
+title: M365
+---
+{% extends "../ext/dev.nunj" %}
+
+{% block content %}
+  {% include "../pages/template_m365.nunj" %}
+{% endblock content %}

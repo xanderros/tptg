@@ -1,0 +1,15 @@
+{% macro features(props) %}
+  <div class="grid grid_features{% if props.topIndent %} indent-features{% endif %}">
+    {% for item in props.data %}
+      <div class="grid__col">
+        <div class="feature">
+          <div class="feature__top">
+            <img class="feature__icon" src="../_img/solutions/{{ item.iconName }}.svg" alt="{{ item.title }}">
+          </div>
+          <h3 class="feature__title">{{ item.title }}</h3>
+          <div class="feature__text">{{ item.text }}</div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endmacro %}

@@ -1,0 +1,15 @@
+{% macro statistics(props) %}
+  <div class="grid grid_statistics">
+    {% for item in props.data %}
+      <div class="grid__col">
+        <div class="stat">
+          <div class="stat__top">
+            <img class="stat__icon" src="../_img/solutions/{{ item.iconName }}.svg" alt="">
+          </div>
+          <div class="stat__title">{{ item.title }}</div>
+          <div class="stat__text">{{ item.text }}</div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endmacro %}

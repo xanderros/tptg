@@ -1,0 +1,204 @@
+{% extends "../ext/prod.nunj" %}
+
+{% block content %}
+  {{ hero({
+    nogradient: 'true',
+    title: 'The edge is evolving',
+    text: "Edge is going to be transformational. Right now many view the endpoint as a commodity purchase, a laptop, a phone, a tablet but it's going to be so much more than that in the future.",
+    buttonText: 'Let’s talk edge',
+    buttonLink: '#contact',
+    imgName: 'hero_edge',
+    imgAlt: 'Edge'
+  }) }}
+
+  <div class="frame pb-features">
+    <div class="frame__bg">
+      {{ img({ className: 'frame__bg-img', name: 'bg_purecloud', format: 'png', cover: 'true' }) }}
+    </div>
+    <div class="frame__content box box_small">
+      <div class="lead-text mb-4">
+        Your edge devices need to securely connect people, apps, data and devices – empowering teams with increased
+        collaboration and flexibility. 5G and IoT are to change the world, every bit as much as cloud has over the last
+        decade.
+      </div>
+      <h2 class="title column-sm color-white mb-title">Benefits</h2>
+      {{ benefits({
+        png: "true",
+        data: [{
+          iconName: "edge/collaboration",
+          title: "Collaboration"
+        },{
+          iconName: "edge/productivity",
+          title: "Productivity"
+        },{
+          iconName: "edge/flexibility",
+          title: "Flexibility"
+        },{
+          iconName: "edge/security",
+          title: "Security"
+        },{
+          iconName: "edge/iot",
+          title: "Internet of Things"
+        }]
+      }) }}
+    </div>
+  </div>
+
+  <div class="box box_small mb-3">
+    <div class="mb-5">
+      {{ features({
+        topIndent: 'true',
+        data: [{
+          title: "CapEx",
+          text: "Traditional one-off or cyclical investment",
+          iconName: "capex"
+        },{
+          title: "DaaS",
+          text: "Combine services to configure and support your IT assets from order to end of life, as a service",
+          iconName: "daas"
+        },{
+          title: "OpEX",
+          text: "Split your payments across manageable monthly fees",
+          iconName: "opex"
+        }]
+      }) }}
+    </div>
+
+    {{ video({
+      id: '504406366',
+      imgName: 'vimeo-thumb_edge',
+      imgAlt: 'PTG Edge'
+    }) }}
+  </div>
+
+  {{ wall({
+    title: "Tiered security",
+    text: "Cyber threats continue to evolve with attacks becoming more frequent,
+          sophisticated and targeted. Our tiered security model protects with multiple solutions at cloud, perimeter and
+          endpoint levels - putting the necessary control measures in place to help secure your organisation and negate
+          attacks, including zero-day threats.",
+    buttonLink: 'edge/security',
+    buttonTitle: 'Find out more',
+    imgName: "tiered-security"
+  }) }}
+
+  {{ unit(
+  title='Network',
+  text="<p>Freedom of connectivity has never been so important. Today’s inter-connected world requires always-on,
+          reliable and fast communications – between sites, between organisations, between people. We provide a suite of
+          ultra-fast internet solutions that are robust for business, achieving connectivity to multiple sites and/or
+          the internet using only the best telecom providers, partners and technology to provide the best fit for our
+          customers. This is the era of the Software Defined Network (SDN).</p>",
+  imgName='network',
+  imgFormat='jpg'
+  ) }}
+
+  {{ wall({
+    title: "Communications",
+    text: "We understand the importance of a well-structured communication system. Our managed communication services include on-premise and hosted IP telephony, video and collaboration, plus calls with inclusive lines and minutes designed specifically and individually to your requirements.",
+    imgName: "communications"
+  }) }}
+
+  <div class="section section_small">
+    {{ unit(
+    title='Internet of Things (IoT)',
+    text='
+    <p>Our IoT service is the combination of multiple solutions, vendors and service providers to provide IoT with real-world benefits and we’re proud to be the first service provider in the UK to offer a number of ‘pre-packaged’ solutions ready for market. Whilst our solutions are pre-packaged, they’re designed to resolve your business challenges through our bespoke development services.</p>
+    <p><a href="edge/iot" class="button button_primary">Find out more</a></p>',
+    imgName='iot',
+    imgFormat='jpg',
+    reverse='true',
+    shadow='true',
+    paddingSmall='true'
+    ) }}
+
+    {{ unit(
+    title='Virtual Reality (VR)',
+    text='<p>There’s nothing quite like wandering through an interactive landscape and our VR solution can develop completely new ways to help your audience connect with your VR experience. Whether it’s gaze-activated hotspots, controllers that allow you to engage with the 3D virtual environment, or tailor-made VR apps: our extensive VR services offer a new and exciting realm of audience participation and engagement.</p>
+    <p><a href="edge/vr" class="button button_primary">Find out more</a></p>',
+    imgName='vr',
+    imgFormat='jpg',
+    shadow='true',
+    paddingSmall='true'
+    ) }}
+  </div>
+
+  <div class="cover">
+    <div class="cover__content">
+      <div class="box typo mb-1">
+        <h2 class="title column-sm color-white">Apps</h2>
+        <div class="paragraph column-sm color-white">
+          Digital transformation is all about harnessing the power of the cloud and the edge to deliver transformative
+          processes. Applications are at the heart of this: replacing manual, paper-intensive and time consuming
+          functions with new, fast and functional solutions. The days of big, monolithic, application suites are over,
+          welcome to the agile world of apps.
+        </div>
+      </div>
+      {{ slider({
+        typeDesc: 'true',
+        arrowsColor: 'white',
+        data: [{
+          imgName: 'automation-365',
+          title: 'Automation 365',
+          text: "Manage collaboration tools for your people by an intelligent recommendation engine linked to Microsoft Teams, SharePoint Online Sites and 365 Groups that may guide, reduce site sprawl, avoid duplications and empower your workforce to collaborate and engage. Create and introduce templates to your organisation to promote reuse, share knowledge, create consistency and adhere to regulatory requirements."
+        },{
+          imgName: 'onboard-365',
+          title: 'Onboard 365',
+          text: "A revolutionary onboarding platform integrated to Microsoft 365, allowing hiring managers and departments to create specific onboarding experiences. With an easy, intuitive and highly configurable interface this prompts new hires to go through your organisation’s introductory videos, policies and procedures, links and recommended communities on Microsoft Teams, Yammer and SharePoint based on skills and interests."
+        },{
+          imgName: 'classifier-365',
+          title: 'Classifier 365',
+          text: "Hyper-intuitive cognitive capabilities intelligently extract keywords by understanding the context of your content and eliminates the effort required for end-users to add metadata manually, thereby allowing your people to focus on their priorities rather than being librarians. Works natively with Microsoft Teams, SharePoint  and standard file shares allowing automated classification, compliance and search throughout document archives."
+        },{
+          imgName: 'qms-365',
+          title: 'QMS 365',
+          text: "Manage compliance through automation. Helps you to define policy, procedures and standard operating procedures such as quality records, regulatory requirements, ISO requirements and industry specifications and can be easily tailored to the needs of any organisation. Built specifically for Microsoft 365, it provides smooth integration, versatility and scalability.  "
+        },{
+          imgName: 'data-365',
+          title: 'Data 365',
+          text: "Big data can be a real problem. So can unstructured data. This tool uses natural language processors (NLP) to understand the semantic context of your data. Its hyper-intuitive cognitive capabilities intelligently extract keywords which accurately describe the content of the data and comprehension throughout any organisation. It has the capability to generate taxonomies, identifying opportunities for your organisation to drive operational efficiencies.  "
+        }]
+      }) }}
+    </div>
+  </div>
+
+  <div class="section section_pt_md section_pb_0">
+    <h2 class="title column-sm">Our success stories</h2>
+    {{ slider({
+      arrowsColor: 'pink',
+      data: [{
+        quote: "PTG are a pleasure to work with. We get excellent support always fast, friendly & reliable. Fantastic service, technically resourceful with highly competitive pricing.",
+        author: 'Mike Wood, IT Service Desk Manager',
+        place: 'South East Water',
+        imgName: 'logo_south-east-water'
+      },{
+        quote: "Many businesses had difficulties rolling out remote working due to the COVID-19 pandemic, we were able to switch over with ease & support every step of the way.",
+        author: 'Rachel Illsley, Finance Director',
+        place: 'Spawforths',
+        imgName: 'logo_spawforths'
+      },{
+        quote: "With COVID-19 & the shortage of products, it didn’t take PTG long to source new items. We implemented WFH proficiently. It wouldn’t have been possible without PTG.",
+        author: 'Vince Kennedy, Service Manager',
+        place: 'Northumbria Water',
+        imgName: 'logo_northumbria-water'
+      },{
+        quote: "Everyone is happy with the service PTG provides & this is reflected in the NPS results, with 90%+ satisfaction.",
+        author: 'Mike Hinchcliffe, Director',
+        place: 'Group IT',
+        imgName: 'logo_group-it'
+      },{
+        quote: "PTG are a pleasure to work with through the different projects we’ve worked on. I’m looking forward to work with PTG on our upcoming projects later this year.",
+        author: 'Parmjit Samplay, Head of Infrastructure and Network Security',
+        place: 'SDL Surveying',
+        imgName: 'logo_sdl-surveying'
+      }]
+    }) }}
+  </div>
+
+  {{ contact({
+    column: 'true',
+    title: 'Get in touch about your next project today, our team is ready to discuss your ideas.',
+    imgName: 'get-in-touch_3'
+  }) }}
+
+{% endblock content %}

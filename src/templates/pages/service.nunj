@@ -1,0 +1,8 @@
+---
+title: Service
+---
+{% extends "../ext/dev.nunj" %}
+
+{% block content %}
+  {% include "../pages/template_service.nunj" %}
+{% endblock content %}

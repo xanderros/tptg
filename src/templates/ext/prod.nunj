@@ -1,0 +1,25 @@
+{% from "../../components/hero/hero.nunj" import hero %}
+{% from "../../components/unit/unit.nunj" import unit %}
+{% from "../../components/partners/partners.nunj" import partners %}
+{% from "../../components/benefits/benefits.nunj" import benefits %}
+{% from "../../components/contact/contact.nunj" import contact %}
+{% from "../../components/slider/slider.nunj" import slider %}
+{% from "../../components/video/video.nunj" import video %}
+{% from "../../components/advantages/advantages.nunj" import advantages %}
+{% from "../../components/img/img.nunj" import img %}
+{% from "../../components/icon/icon.nunj" import icon %}
+{% from "../../components/services/services.nunj" import services %}
+{% from "../../components/features/features.nunj" import features %}
+{% from "../../components/wall/wall.nunj" import wall %}
+{% from "../../components/statistics/statistics.nunj" import statistics %}
+
+  <link rel="stylesheet" href="../_css/solutions-styles.css"/>
+</head>
+<body>
+<div class="page">
+  {% block content %}{% endblock content %}
+</div>
+
+{% block scripts %}
+  <script src="../_js/solutions.js"></script>
+{% endblock scripts %}

@@ -1,0 +1,29 @@
+// fonts
+$font-interstate: 'Interstate', sans-serif;
+$font-sf-compact: 'SF Compact', sans-serif;
+
+$default-font-size: 16px;
+
+// colors
+$color-grey: #a3a4a6;
+$color-light-grey: #f8f8f8;
+$color-dark-grey: #999;
+$color-black: #2d3030;
+$color-white: #fff;
+$color-white-lucent: rgba(255,255,255,.7);
+$color-red: #f00;
+$color-purple: #AB35E5;
+
+// transitions
+$default-transition-duration: 0.25s;
+$default-transition-function: ease-out;
+$default-transition: 0.25s ease-out;
+
+// width
+$container-width: 1200px;
+$container-width-small: 1100px;
+
+// side paddings
+$offset-side: 40px;
+$offset-side-lg: 30px;
+$offset-side-sm: 20px;

@@ -1,0 +1,15 @@
+{% macro services(props) %}
+  <div class="grid grid_col-2">
+    {% for item in props.data %}
+      <div class="grid__col">
+        <div class="service">
+          <div class="service__top">
+            <img class="service__icon" src="../_img/solutions/{{ item.iconName }}.svg" alt="{{ item.title }}">
+          </div>
+          <h3 class="service__title">{{ item.title }}</h3>
+          <div class="service__text paragraph">{{ item.text }}</div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endmacro %}

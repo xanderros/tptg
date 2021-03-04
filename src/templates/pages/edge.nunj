@@ -1,0 +1,8 @@
+---
+title: Edge
+---
+{% extends "../ext/dev.nunj" %}
+
+{% block content %}
+  {% include "../pages/template_edge.nunj" %}
+{% endblock content %}

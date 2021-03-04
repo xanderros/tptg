@@ -1,0 +1,194 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  background-color: $color-grey;
+  width: 100%;
+  min-height: 800px;
+  padding-top: 80px;
+  padding-bottom: 12vw;
+
+  &__title {
+    font-family: $font-interstate;
+    font-size: 52px!important;
+    line-height: 1.2;
+    letter-spacing: -0.04em;
+    color: $color-white;
+  }
+  &__text {
+    margin-top: 22px;
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: 0.01em;
+    color: $color-white-lucent;
+  }
+  &__button {
+    margin-top: 45px;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, #000 -2.96%, rgba(0, 0, 0, 0) 99.93%);
+    }
+  }
+  &__bg-img {
+    @include img-cover;
+    object-position: top center;
+
+    &_center {
+      object-position: center center;
+      font-family: 'object-fit: cover; object-position: center;';
+    }
+  }
+  &__content {
+    position: relative;
+    max-width: 800px;
+    padding: 52px 57px 65px 68px;
+    background-color: $color-black;
+  }
+
+  &_no-gradient {
+    .hero {
+      &__bg {
+        &:after {
+          content: none;
+        }
+      }
+    }
+  }
+
+  &_center {
+    justify-content: center;
+
+    .hero {
+      &__content {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 932px;
+        padding: 10px 40px 0;
+        background-color: transparent;
+      }
+      &__title {
+        text-align: center;
+      }
+    }
+  }
+
+  @media (max-width: 1599px) {
+    min-height: 773px;
+    padding-bottom: 12vw;
+
+    &_center {
+      min-height: 682px;
+    }
+  }
+  @include screen-xl {
+    min-height: 738px;
+    padding-bottom: 13vw;
+
+    &__title {
+      font-size: 45px!important;
+    }
+    &__text {
+      margin-top: 19px;
+    }
+    &__button {
+      margin-top: 40px;
+    }
+    &__content {
+      max-width: 600px;
+      padding: 48px 53px 60px 60px;
+    }
+  }
+  @include screen-lg {
+    min-height: 700px;
+    padding-top: 75px;
+    padding-bottom: 16vw;
+  }
+  @include screen-md {
+    padding-bottom: 22vw;
+  }
+  @include screen-sm {
+    min-height: 0;
+    padding-top: 50px;
+    padding-bottom: 28vw;
+
+    &__title {
+      font-size: 34px!important;
+    }
+    &__text {
+      margin-top: 16px;
+      font-size: 15px;
+      line-height: 1.6;
+      letter-spacing: normal;
+    }
+    &__content {
+      padding: 32px 30px 35px;
+    }
+    &__button {
+      margin-top: 30px;
+    }
+
+    &_center {
+      min-height: 580px;
+
+      .hero {
+        &__title {
+          font-size: 32px!important;
+
+          br {
+            display: none;
+          }
+        }
+        &__content {
+          padding-top: 5px;
+          padding-left: 30px;
+          padding-right: 30px;
+        }
+      }
+    }
+  }
+  @include screen-xs {
+    padding-bottom: 32vw;
+
+    &__content {
+      padding: 25px 25px 30px;
+    }
+
+    &_center {
+      .hero {
+        &__title {
+          font-size: 30px!important;
+        }
+        &__content {
+          padding-top: 5px;
+          padding-left: 25px;
+          padding-right: 25px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .hero__bg:before {
+    display: block;
+    width: 100%;
+    content: "";
+    padding-bottom: 100%;
+    height: 0;
+  }
+}
